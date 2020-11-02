@@ -12,6 +12,11 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
+"""
+selenium第四次作业，作业要求：
+    1. 使用 opms 系统，进入项目管理，新建一个项目
+    2. 添加成功即可，不需要做其他操作
+"""
 
 def find_element_explicit_wait(driver, locator, timeout=10, poll_frequency=0.5,
                                method=ec.visibility_of_element_located):
