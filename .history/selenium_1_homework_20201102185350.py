@@ -27,24 +27,26 @@ def find_element_explicit_wait(driver, locator, timeout=5, poll_frequency=0.5, m
 
 
 def selenium_run():
-    # 1、获取driver对象
+    # 1、设置开始时间
+    start_time = time.time()
+    # 2、获取driver对象
     driver = webdriver.Chrome(
         executable_path=r'D:\webdrivers\chromedriver.exe')
-    # 2、访问网站
+    # 3、访问网站
     driver.get(url='https://m.weibo.cn/')
-    # 3、点击搜索框
+    # 4、点击搜索框
     find_element_explicit_wait(driver=driver, locator=(
         By.CSS_SELECTOR, '.m-search>i')).click()
-    # 4、点击'热搜榜'
+    # 5、点击'热搜榜'
     find_element_explicit_wait(driver=driver, locator=(
         By.CSS_SELECTOR, 'div[class~="m-col-2"]>div>div>div:nth-child(8)')).click()
-    # 5、获取所有实时热点
+    # 6、获取所有实时热点
     eles = find_element_explicit_wait(driver=driver, locator=(By.CSS_SELECTOR,
                                                               '#app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)>div>div>div'),
                                       method=ec.visibility_of_all_elements_located)
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
-    # 6、过滤掉普通的热点
+    # 7、过滤掉普通的热点
     for ele in eles:
         try:
             img = ele.find_element_by_class_name('m-link-icon')

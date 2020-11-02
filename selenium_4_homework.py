@@ -70,7 +70,7 @@ def selenium_run():
     # 10、回到项目管理
     find_element_explicit_wait(driver=driver, locator=(By.CSS_SELECTOR, '.fa-book')).click()
     # # 9、退出浏览器
-    time.sleep(100)
+    time.sleep(5)
     driver.quit()
 
 
