@@ -1,0 +1,17 @@
+# ide
+.history
+.vscode
+.idea
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
