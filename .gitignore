@@ -1,7 +1,7 @@
 # ide
 .history
-.vscode
 .idea
+__pycache__
 
 # Windows:
 Thumbs.db

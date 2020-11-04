@@ -3,7 +3,7 @@
 """
 # @Author       : Wenqing Nie
 # @Date         : 2020-11-02 21:13:55
-# @LastEditTime : 2020-11-03 11:11:28
+# @LastEditTime : 2020-11-03 14:12:10
 # @Description  : 简单cookies获取以及HTTPS请求的发送
 # @FilePath     : /Learn_softwareAutomatedTesting/delivery_system_teacher/cookieTest.py
 """
