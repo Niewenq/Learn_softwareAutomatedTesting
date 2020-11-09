@@ -19,3 +19,4 @@ driver.find_element_by_css_selector(
     css_selector="input[type='file']").send_keys(r'D:\app.png')
 time.sleep(10)
 driver.quit()
+

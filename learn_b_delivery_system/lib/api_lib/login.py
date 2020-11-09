@@ -10,22 +10,23 @@
 import requests
 import json
 import hashlib
-from delivery_system_teacher.configs.config import HOST
+from learn_b_delivery_system.configs.config import HOST
 
 
 def get_md5(psw):
-    '''
+    """
     # @description:获得字符串MD5加密32位小写
     # @param {输入的字符串} psw
     # @return {返回32位小写MD5加密}
-    '''
+    """
     md5 = hashlib.md5()  # 实例化对象
     md5.update(psw.encode('utf-8'))  # 加密操作
     return md5.hexdigest()
 
 
 class Login:
-    def login(self, inData, getToken=True):  # 实例方法---可以直接接收json字符串
+    @staticmethod
+    def login(inData, getToken=True):  # 实例方法---可以直接接收json字符串
         """
         # @description: 登录类的登录函数
         # @param {*} inData
@@ -43,4 +44,4 @@ class Login:
 
 
 if __name__ == '__main__':
-    print(Login().login('{"username":"sq0001","password":"123456"}'))
+    print(Login().login('{"username":"sq0106","password":"n4jz4pdhx4"}'))

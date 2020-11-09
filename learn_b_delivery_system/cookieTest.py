@@ -17,7 +17,7 @@ def login(inData):
     # @param {请求参数} inData
     # @return {返回cookies}
     """
-    """
+    '''
     # ? 1、http协议
     url = 'http://120.55.190.222:7080/api/mgr/loginReq'  # 路径
     payload = inData
@@ -34,7 +34,7 @@ def login(inData):
     print(resp.cookies['sessionid'])
 
     return resp.cookies
-    """
+    '''
 
     # ? 2、HTTPS协议请求的发送，但是会有InsecureRequestWarning的警告信息
     requests.packages.urllib3.disable_warnings()  # 忽略警告

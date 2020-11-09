@@ -15,7 +15,7 @@ selenium第三次作业：
         Python高级开发工程师 | 中浙信科技咨询有限公司 | 杭州 | 1-1.5万/月 | 04-27
         on开发工程师 | 杭州新思维计算机有限公司 | 杭州-西湖区 | 1-1.5万/月 | 04-27
 """
-# here put the import lib
+
 import time
 
 from selenium import webdriver
@@ -67,7 +67,7 @@ def selenium_run():
     # #   7.2 删除已选的城市
     for ele in find_element_explicit_wait(driver=driver,
                                           locator=(
-                                              By.CSS_SELECTOR, "[id='work_position_click_multiple_selected'] em"),
+                                                  By.CSS_SELECTOR, "[id='work_position_click_multiple_selected'] em"),
                                           method=ec.visibility_of_all_elements_located):
         ele.click()
     time.sleep(1)
@@ -77,8 +77,8 @@ def selenium_run():
                                    By.CSS_SELECTOR, "[id='work_position_click_center_left']>li:nth-child(4)")).click()
     for address in find_element_explicit_wait(driver=driver,
                                               locator=(
-                                                  By.CSS_SELECTOR,
-                                                  "[id='work_position_click_center_right_list_220200'] em"),
+                                                      By.CSS_SELECTOR,
+                                                      "[id='work_position_click_center_right_list_220200'] em"),
                                               method=ec.visibility_of_all_elements_located):
         if address.text == '杭州':
             address.click()

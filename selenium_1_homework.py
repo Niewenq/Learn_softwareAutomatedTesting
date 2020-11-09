@@ -41,7 +41,8 @@ def selenium_run():
     # 5、获取所有实时热点
     eles = find_element_explicit_wait(driver=driver,
                                       locator=(
-                                          By.CSS_SELECTOR, '#app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)>div>div>div'),
+                                          By.CSS_SELECTOR,
+                                          '#app > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)>div>div>div'),
                                       method=ec.visibility_of_all_elements_located)
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
